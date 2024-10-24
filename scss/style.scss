@@ -1,0 +1,150 @@
+
+
+@import "./_variables.scss";
+@import "./_functions.scss";
+@import "./_mixins.scss";
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import "../node_modules/owl.carousel/dist/assets/owl.carousel.min.css";
+@import "../node_modules/owl.carousel/dist/assets/owl.theme.default.css";
+@import "./utilities";
+
+
+
+body{
+    font-family: "Poppins", sans-serif;
+    
+body {
+    --sb-track-color: #d5d8da;
+    --sb-thumb-color: #5745b3;
+    --sb-size: 6px;
+  }
+  
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  &::-webkit-scrollbar-track {
+    background: $gray;
+    border-radius: 3px;
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    background: $primary;
+    border-radius: 3px;
+    
+  }
+  
+  @supports not selector(::-webkit-scrollbar) {
+    body {
+      scrollbar-color: $primary;
+    }
+  }
+}
+.profile{
+    display: none;
+}
+// Header navbar scss started
+header{
+    box-shadow: $box-shadow;
+    .navbar {
+        .navbar-toggler{
+          border: none;
+          outline: none;
+          padding: 0;
+           box-shadow: none;
+        }
+        .navbar-collapse{
+            text-align: center;
+            // margin-top: 20px;
+        }
+        // .dropdown-menu{
+        //     text-align: center;
+        // }
+    .navbar-nav{
+          margin-top: 20px;
+         .nav-item{
+            font-size: px(14);
+            .dropdown-item{
+                font-size: px(14);
+             }
+         }
+    }
+}
+
+}
+// Header navbar scss ended
+
+
+// Media queries
+// X-Small devices (portrait phones, less than 576px)
+ @media (max-width: 575.98px) { 
+    header{
+        border-radius: 0 0 20px 20px;
+    }
+    .lower_navbar .searchbtn .dropdown button::after{
+        margin-left: 5px;
+    }
+    header .navbar .navbar-collapse{
+        position: absolute;
+        width: 100%;
+        background: rgb(255, 255, 255);
+        left: 0px;
+        top: 60px;
+        z-index: 10;
+        box-shadow: $box-shadow;
+    }
+  
+ }
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) { 
+    .lower_navbar .searchbtn form.searchBar{
+        width: 84%;
+        order:-2;
+    }
+    .lower_navbar .searchbtn .filterBtn{
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        order: -1;
+        position: relative;
+    }
+    .lower_navbar .searchbtn .filterBtn span{
+        display: none;
+    }
+    .lower_navbar .searchbtn .filterBtn small{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        background: $primary;
+        color: $light;
+        font-size: 7px;
+        border-radius: 50%;
+        padding: 2px;
+        top: 0;
+        right: -2px;
+    }
+ }
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) { 
+    .profile{
+        display: block;
+    }
+    .mobile_nav{
+        flex-direction: row-reverse;
+    }
+    .main_wapper section .card_wrapper{
+        grid-template-columns: 1fr;
+    }
+ }
+
+// Large devices (desktops, less than 1200px)
+// @media (max-width: 1199.98px) { ... }
+
+// X-Large devices (large desktops, less than 1400px)
+// @media (max-width: 1399.98px) { ... }
+
